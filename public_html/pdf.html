@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Viewer</title>
+  <style>
+    /* Show the PDF viewer only on mobile devices */
+    @media only screen and (max-device-width: 768px) {
+      embed {
+        display: block;
+      }
+    }
+    /* Hide the PDF viewer on screens wider than 768px */
+    @media only screen and (min-device-width: 769px) {
+      embed {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <embed src="Itinerary.pdf" type="application/pdf" height="500" width="400" />
+</body>
+</html>

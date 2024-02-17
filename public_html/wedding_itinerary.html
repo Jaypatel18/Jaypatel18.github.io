@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Viewer</title>
+  <style>
+    /* Show the image only on mobile devices */
+    @media only screen and (max-device-width: 768px) {
+      #pdf-viewer {
+        display: block;
+      }
+    }
+    /* Hide the image on screens wider than 768px */
+    @media only screen and (min-device-width: 769px) {
+      #pdf-viewer {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="pdf-viewer">
+    <div style="text-align: center;">
+    <img src="Wedding.png" alt="Wedding Image" height="1000" width="320">
+</div>
+
+  </div>
+  <script>
+    window.onload = function() {
+      var pdfViewer = document.getElementById('pdf-viewer');
+      var img = document.querySelector('#pdf-viewer img');
+      if (window.innerWidth > 768) {
+        pdfViewer.innerHTML = '<embed src="Wedding_program.pdf" type="application/pdf" width="100%" height="1000px" />';
+      }
+    };
+  </script>
+</body>
+</html>
